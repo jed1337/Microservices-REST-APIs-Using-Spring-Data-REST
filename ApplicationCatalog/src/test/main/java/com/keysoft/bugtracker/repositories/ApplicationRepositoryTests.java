@@ -23,7 +23,7 @@ public class ApplicationRepositoryTests {
     private static final String URL = "http://localhost:8081/applications";
 
     @Test
-    public void testCreateApplication() throws Exception {
+    public void testCreateApplication() {
         // prepare
         Application application = new Application("New Application", "New tracking app", 2);
 
@@ -41,7 +41,7 @@ public class ApplicationRepositoryTests {
     }
 
     @Test
-    public void testDeleteApplication() throws Exception {
+    public void testDeleteApplication() {
         //prepare
         //no need to prepare data as data created is by ApplicationCatalogApplicationLoader
 
@@ -58,7 +58,7 @@ public class ApplicationRepositoryTests {
     }
 
     @Test
-    public void testUpdateApplication() throws Exception {
+    public void testUpdateApplication() {
         //prepare
         // create the application object with id equal to the one to update
         Application application = new Application(1,"New TrackZilla Name", "New app description", 2);

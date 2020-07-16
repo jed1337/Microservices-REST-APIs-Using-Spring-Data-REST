@@ -22,7 +22,7 @@ public class ApplicationCatalogControllerTests {
     private static final String URL = "http://localhost:8081/applications";
 
     @Test
-    public void testGetApplication() throws Exception {
+    public void testGetApplication() {
         //prepare
         //no need to prepare data as data created is by ApplicationCatalogApplicationLoader
 

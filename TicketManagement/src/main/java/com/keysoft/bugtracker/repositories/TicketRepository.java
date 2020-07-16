@@ -7,8 +7,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RestResource;
 
-import java.util.List;
-
 public interface TicketRepository extends JpaRepository<Ticket, Integer> {
     @RestResource(path = "descriptionIgnoreCaseContaining", rel = "descriptionIgnoreCaseContaining")
     public Page findByDescriptionIgnoreCaseContaining(@Param("description") String description, Pageable p);
