@@ -61,24 +61,22 @@ public class ApplicationCatalogController {
     }
 
     private void getPersonInfo(Application app) {
-        app.setOwnerRole("Undefined");
-        app.setOwnerName("Undefined");
-//        try {
-//            RestTemplate restTemplate = new RestTemplate();
-//            String userManagementService = "http://localhost:8082/persons/" + app.getOwnerId();
-//            ResponseEntity<String> response = restTemplate.getForEntity(userManagementService, String.class);
-//            ObjectMapper mapper = new ObjectMapper();
-//            JsonNode root = null;
-//            root = mapper.readTree(response.getBody());
-//            JsonNode name = root.path("name");
-//            JsonNode role = root.path("role");
-//            app.setOwnerName(name.asText());
-//            app.setOwnerRole(role.asText());
-//        } catch (IOException e) {
-//            app.setOwnerRole("Undefined");
-//            app.setOwnerName("Undefined");
-//            e.printStackTrace();
-//        }
+        try {
+            RestTemplate restTemplate = new RestTemplate();
+            String userManagementService = "http://localhost:8082/persons/" + app.getOwnerId();
+            ResponseEntity<String> response = restTemplate.getForEntity(userManagementService, String.class);
+            ObjectMapper mapper = new ObjectMapper();
+            JsonNode root = null;
+            root = mapper.readTree(response.getBody());
+            JsonNode name = root.path("name");
+            JsonNode role = root.path("role");
+            app.setOwnerName(name.asText());
+            app.setOwnerRole(role.asText());
+        } catch (IOException e) {
+            app.setOwnerRole("Undefined");
+            app.setOwnerName("Undefined");
+            e.printStackTrace();
+        }
 
     }
 

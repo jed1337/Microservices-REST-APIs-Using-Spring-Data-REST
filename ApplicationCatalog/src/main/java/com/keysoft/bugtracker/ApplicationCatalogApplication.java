@@ -10,8 +10,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableJpaRepositories("com.keysoft.bugtracker.repositories")
-@EntityScan("com.keysoft.bugtracker")
-@ComponentScan("com.keysoft")
 public class ApplicationCatalogApplication {
 
 	public static void main(String... args) {
