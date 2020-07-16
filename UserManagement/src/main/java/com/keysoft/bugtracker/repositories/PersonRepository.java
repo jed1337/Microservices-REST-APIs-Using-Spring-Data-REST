@@ -1,6 +1,6 @@
-package main.java.com.keysoft.bugtracker.repositories;
+package com.keysoft.bugtracker.repositories;
 
-import main.java.com.keysoft.bugtracker.domain.Person;
+import com.keysoft.bugtracker.domain.Person;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,4 +1,4 @@
-package main.java.com.keysoft.bugtracker.config;
+package com.keysoft.bugtracker.config;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -8,8 +8,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableAutoConfiguration
-@EntityScan(basePackages = {"main.java.com.keysoft.bugtracker.domain"})
-@EnableJpaRepositories(basePackages = {"main.java.com.keysoft.bugtracker.repositories"})
+@EntityScan(basePackages = {"com.keysoft.bugtracker.domain"})
+@EnableJpaRepositories(basePackages = {"com.keysoft.bugtracker.repositories"})
 @EnableTransactionManagement
 public class RepositoryConfiguration {
 }

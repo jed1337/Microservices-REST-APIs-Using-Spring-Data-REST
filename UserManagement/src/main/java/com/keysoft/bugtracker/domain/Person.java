@@ -1,4 +1,4 @@
-package main.java.com.keysoft.bugtracker.domain;
+package com.keysoft.bugtracker.domain;
 
 import javax.persistence.*;
 

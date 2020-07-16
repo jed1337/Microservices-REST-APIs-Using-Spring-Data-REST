@@ -1,4 +1,4 @@
-package main.java.com.keysoft.bugtracker.config;
+package com.keysoft.bugtracker.config;
 
 import org.h2.server.web.WebServlet;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;

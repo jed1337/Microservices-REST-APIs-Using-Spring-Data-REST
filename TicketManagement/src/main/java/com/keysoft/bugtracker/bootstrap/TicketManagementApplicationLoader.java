@@ -1,7 +1,7 @@
-package main.java.com.keysoft.bugtracker.bootstrap;
+package com.keysoft.bugtracker.bootstrap;
 
-import main.java.com.keysoft.bugtracker.domain.Ticket;
-import main.java.com.keysoft.bugtracker.repositories.TicketRepository;
+import com.keysoft.bugtracker.domain.Ticket;
+import com.keysoft.bugtracker.repositories.TicketRepository;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
