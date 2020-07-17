@@ -11,14 +11,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class ApplicationCatalogApplicationLoader implements ApplicationListener<ContextRefreshedEvent> {
 
-//    @Autowired
+    @Autowired
     private ApplicationRepository applicationRepository;
     private Logger log = Logger.getLogger(ApplicationCatalogApplicationLoader.class);
-
-    @Autowired
-    public void setApplicationRepository(ApplicationRepository applicationRepository) {
-        this.applicationRepository = applicationRepository;
-    }
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {

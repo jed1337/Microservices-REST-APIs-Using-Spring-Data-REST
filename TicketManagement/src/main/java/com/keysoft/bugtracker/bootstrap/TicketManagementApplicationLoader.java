@@ -13,14 +13,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class TicketManagementApplicationLoader implements ApplicationListener<ContextRefreshedEvent> {
 
-
+    @Autowired
     private TicketRepository ticketRepository;
     private Logger log = Logger.getLogger(TicketManagementApplicationLoader.class);
-
-    @Autowired
-    public void setTicketRepository(TicketRepository ticketRepository) {
-        this.ticketRepository = ticketRepository;
-    }
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
